@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/broodbear/tools/pkg/config"
 	"github.com/broodbear/tools/scripts"
 	"github.com/urfave/cli/v2"
 )
@@ -23,7 +24,7 @@ var App = &cli.App{
 			Aliases: []string{"i"},
 			Usage:   "configure the environment",
 			Action: func(cCtx *cli.Context) error {
-				return nil
+				return config.Setup()
 			},
 		},
 		{
